@@ -186,7 +186,7 @@ func (d *VBox42Driver) Version() (string, error) {
 		return "", fmt.Errorf("VirtualBox is not properly setup: %s", versionOutput)
 	}
 
-	versionRe := regexp.MustCompile("[^.0-9]")
+	versionRe := regexp.MustCompile("[^.0-9_RC]")
 	matches := versionRe.Split(versionOutput, 2)
 	if len(matches) == 0 || matches[0] == "" {
 		return "", fmt.Errorf("No version found: %s", versionOutput)
