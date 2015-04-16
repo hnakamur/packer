@@ -129,6 +129,8 @@ func scancodes(message string) []string {
 	special["<end>"] = []string{"4f", "cf"}
 	special["<pageUp>"] = []string{"49", "c9"}
 	special["<pageDown>"] = []string{"51", "d1"}
+	special["<pressAlt>"] = []string{"38"}
+	special["<releaseAlt>"] = []string{"b8"}
 
 	shiftedChars := "~!@#$%^&*()_+{}|:\"<>?"
 
